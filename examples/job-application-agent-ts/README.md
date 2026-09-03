@@ -60,7 +60,7 @@ The sample persona is a fictional software engineer. To apply as yourself, copy 
 ## Gotchas this example encodes
 
 - **Staged teardown order matters.** `index.ts` closes the browser session first (releasing it starts the async replay upload), then downloads the replay and reads the sandbox submission receipt *while the browser client and sandbox are still alive*, and only then kills the sandbox and closes the client. Reversing that order silently loses the replay and the receipt.
-- **Replay upload is async after release.** The first `downloadReplay` polls usually 404 on a perfectly good recording; `replay.ts` retries for ~30s before falling back to printing the session id and a console link.
+- **Replay upload is async after release — and intermittent on short sessions.** The `downloadReplay` poll usually 404s at first even on a healthy recording; `replay.ts` retries for ~45s. On very short sessions the recording backend has been observed (live, 2026-09-03) to produce no replay at all — the run then logs a warning and prints the session id, which you can open in the Solari console to watch. If a replay matters for your demo, keep the session active for ~20s+ with real page activity.
 - **`browser.close()` is enough to exit (as of `@solarisdk/browser` 0.1.3).** The client unrefs its retry listener, so `browser.close()` alone lets the process exit; `solari.close()` is still called to release the client's pool promptly.
 - **`kill()`, not `close()`, ends a sandbox.** `close()` drops the local control channel; the VM keeps running until its idle timeout. `disposeHostedForm` calls `sandbox.kill()`.
 - **Sandbox commands are not shell-interpreted.** The form server is started via an explicit `sh -c` with `nohup … &` so it runs backgrounded.

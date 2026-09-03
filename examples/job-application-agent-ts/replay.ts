@@ -24,8 +24,12 @@ import type { RunLogger } from "./runlog.ts"
 
 const STAGE = "replay"
 const EXAMPLE_DIR = dirname(fileURLToPath(import.meta.url))
-/** Retry budget for the async replay upload (~30s at 3s spacing). */
-const POLL_ATTEMPTS = 10
+/**
+ * Retry budget for the async replay upload. The upload is async after the
+ * session is released and has been observed (live 2026-09-03) to take up to
+ * ~30s on healthy recordings; the poll covers that window plus margin.
+ */
+const POLL_ATTEMPTS = 15
 const POLL_DELAY_MS = 3_000
 
 /** The subset of the browser Solari client this module calls. */
