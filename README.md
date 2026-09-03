@@ -33,6 +33,12 @@ past. Copy one into your project and change the parts you care about.
 | --- | --- | --- |
 | [desktop-computer-use-py](examples/desktop-computer-use-py) | Python | Screenshot, click, and type on a Linux GUI |
 
+### Cross-product
+
+| Example | Language | What it shows |
+| --- | --- | --- |
+| [job-application-agent-ts](examples/job-application-agent-ts) | TypeScript | Read a posting, tailor, and submit — browser + sandbox |
+
 ## Running an example
 
 Each directory is self-contained.
