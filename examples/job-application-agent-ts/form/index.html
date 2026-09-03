@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application form — sandbox demo</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #1f2933;
+    background: #f4f6f8;
+  }
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 2rem 2.5rem 2.5rem;
+  }
+  h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+  .role-line { margin: 0 0 1rem; color: #486581; }
+  .demo-note {
+    border: 1px dashed #9fb3c8;
+    background: #f0f4f8;
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    color: #334e68;
+    margin: 0 0 1.5rem;
+  }
+  label { display: block; margin: 1.1rem 0 0.3rem; font-weight: 600; }
+  label .req { color: #b3341c; }
+  .hint { font-size: 0.8rem; color: #627d98; font-weight: 400; }
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #9fb3c8;
+    border-radius: 6px;
+    font: inherit;
+    color: inherit;
+    background: #ffffff;
+  }
+  textarea { resize: vertical; min-height: 6rem; }
+  input:focus, textarea:focus {
+    outline: 2px solid #2680c2;
+    outline-offset: 1px;
+    border-color: #2680c2;
+  }
+  input[type="file"] { display: block; }
+  button {
+    margin-top: 1.5rem;
+    padding: 0.65rem 1.4rem;
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background: #2680c2;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover { background: #1f6ea8; }
+  footer { margin-top: 1.5rem; font-size: 0.8rem; color: #829ab1; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Application form</h1>
+  <!-- Static placeholder copy: the form boots before the job posting is read,
+       so the employer and role shown here are generic. The pipeline's submit
+       module fills the actual employer/role values into the fields below,
+       which is what lands in the stored submission. -->
+  <p class="role-line">Applying to <strong>the hiring team</strong> for the role of <strong>the advertised position</strong>.</p>
+
+  <p class="demo-note">
+    <strong>Demo / sandbox form.</strong> This is a safe application form hosted inside a Solari sandbox
+    for the job-application-agent example. Submissions are stored only inside the sandbox and are never
+    sent to a real employer.
+  </p>
+
+  <form action="" method="post" enctype="application/x-www-form-urlencoded">
+    <label for="fullName">Full name <span class="req">*</span></label>
+    <input id="fullName" name="fullName" type="text" required autocomplete="name">
+
+    <label for="email">Email <span class="req">*</span></label>
+    <input id="email" name="email" type="email" required autocomplete="email">
+
+    <label for="role">Role applying for <span class="req">*</span></label>
+    <input id="role" name="role" type="text" required>
+
+    <label for="resume">
+      Resume <span class="req">*</span>
+      <span class="hint">— .txt, .pdf or .md</span>
+    </label>
+    <input id="resume" name="resume" type="file" accept=".txt,.pdf,.md,text/plain,application/pdf,text/markdown" required>
+
+    <label for="coverLetter">Cover letter <span class="req">*</span></label>
+    <textarea id="coverLetter" name="coverLetter" rows="8" required></textarea>
+
+    <label for="whyThisRole">Why are you interested in this role? <span class="req">*</span></label>
+    <textarea id="whyThisRole" name="whyThisRole" rows="4" required></textarea>
+
+    <label for="whyThisCompany">Why do you want to work at this company? <span class="req">*</span></label>
+    <textarea id="whyThisCompany" name="whyThisCompany" rows="4" required></textarea>
+
+    <label for="relevantExperience">Relevant experience <span class="req">*</span></label>
+    <textarea id="relevantExperience" name="relevantExperience" rows="6" required></textarea>
+
+    <button type="submit">Submit application</button>
+
+    <footer>
+      Demo application form served from inside a Solari sandbox. The company advertising this role is
+      not involved in this form; see the note above.
+    </footer>
+  </form>
+</main>
+</body>
+</html>
