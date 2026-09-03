@@ -1,0 +1,41 @@
+{
+  "name": "Avery Chen",
+  "email": "avery.chen@example.com",
+  "headline": "Software engineer with a focus on ML systems and data pipelines",
+  "location": "San Francisco, CA (remote-friendly)",
+  "work_history": [
+    {
+      "role": "Software Engineer",
+      "company": "Northwind Data",
+      "years": "2021-present",
+      "highlights": [
+        "Built and operated the feature-store service powering real-time model inference",
+        "Cut training-data pipeline cost roughly 40% with incremental materialization",
+        "Mentored three junior engineers on testing and code-review practices"
+      ]
+    },
+    {
+      "role": "Backend Engineer",
+      "company": "Brightpath Labs",
+      "years": "2018-2021",
+      "highlights": [
+        "Shipped a gRPC recommendation service serving 2M requests/day",
+        "Designed the A/B evaluation harness the ML team uses for model rollouts",
+        "Introduced structured logging and runbook coverage for on-call rotations"
+      ]
+    }
+  ],
+  "skills": [
+    "TypeScript",
+    "Python",
+    "Node.js",
+    "PostgreSQL",
+    "Kubernetes",
+    "ML pipelines",
+    "Feature engineering",
+    "Playwright",
+    "REST & gRPC APIs",
+    "Observability"
+  ],
+  "resumeFile": "./resume-sample.txt"
+}

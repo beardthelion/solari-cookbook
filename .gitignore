@@ -6,3 +6,4 @@ __pycache__/
 .venv/
 venv/
 screenshot.png
+examples/job-application-agent-ts/run-output/

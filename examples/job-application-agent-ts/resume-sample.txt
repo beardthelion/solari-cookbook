@@ -1,0 +1,29 @@
+AVERY CHEN
+avery.chen@example.com | San Francisco, CA | github.com/averychen-example
+
+SUMMARY
+Software engineer focused on machine-learning systems and data pipelines:
+building and operating the services that train, serve, and monitor models in
+production.
+
+EXPERIENCE
+
+Northwind Data — Software Engineer (2021-present)
+- Built and operated the feature-store service powering real-time model
+  inference for ranking and personalization features.
+- Cut training-data pipeline cost roughly 40% by introducing incremental
+  materialization and partitioning.
+- Mentored three junior engineers on testing and code-review practices.
+
+Brightpath Labs — Backend Engineer (2018-2021)
+- Shipped a gRPC recommendation service serving 2M requests/day.
+- Designed the A/B evaluation harness the ML team uses for model rollouts.
+- Introduced structured logging and runbook coverage for on-call rotations.
+
+PROJECTS
+- Playground automation harness: browser-driven agent that reads live pages,
+  tailors copy from a persona, and fills forms — the basis for this demo.
+
+SKILLS
+TypeScript, Python, Node.js, PostgreSQL, Kubernetes, ML pipelines,
+feature engineering, Playwright, REST & gRPC APIs, observability
