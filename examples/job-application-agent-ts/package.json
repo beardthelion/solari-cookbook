@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "tsx index.ts",
-    "test": "tsx --test foundation.test.ts",
+    "test": "tsx --test foundation.test.ts posting.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
