@@ -3,6 +3,14 @@
 Short, runnable examples for [Solari](https://getsolari.com) — cloud browsers,
 sandboxes, and desktops behind one API key.
 
+> **New: [job-application-agent-ts](examples/job-application-agent-ts)** — an
+> autonomous job-application pipeline that ties the browser and sandbox
+> together: a recorded cloud browser reads a live posting, researches the
+> employer, tailors an application from a configurable persona, and submits it
+> to a safe application form the pipeline hosts itself inside a sandbox.
+> Deterministic by default, with optional LLM tailoring. See its
+> [README](examples/job-application-agent-ts/README.md) to run it.
+
 Every example in this repo is a complete program you can run in under a minute.
 They are deliberately small: one idea each, no framework, no scaffolding to read
 past. Copy one into your project and change the parts you care about.
